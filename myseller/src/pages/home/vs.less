@@ -1,0 +1,103 @@
+@import "~baseStyle/variable.less";
+@import "~baseStyle/mixin.less";
+
+.app-entry-ctn {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  z-index: 1;
+
+  .app-entry-rv-ctn {
+    // border: 1px solid red;
+  }
+
+  .app-entry-rv-ctn {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 50px;
+  }
+
+  .slidergo-leave {
+    opacity: 0;
+  }
+
+  .slidergo-leave-to {
+    opacity: 0;
+  }
+
+  .slidergo-enter {
+    opacity: 0; // transform: translate()
+  }
+
+  .slidergo-enter-active {
+    animation: bounce-in 0.3s; // transition: all 0.3s;
+  }
+
+  .slidergo-enter-to {
+    opacity: 1;
+  }
+
+  @keyframes bounce-in {
+    0% {
+      transform: scale(0.96);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/*尾部导航栏模块start---------------------*/
+.footer-ctn {
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 44px;
+  padding-top: 3px;
+  border-top: 1px solid #ccc;
+  z-index: 100;
+  background: #fff;
+
+  &>.ui-row-flex {
+    height: 100%;
+  }
+
+  .fm-cell {
+    text-align: center;
+    height: 100%;
+
+    &>a {
+      display: block; // padding: 5px 0px;
+      color: #666;
+
+      &>span {
+        display: block;
+      }
+
+      .fm-tip {
+        margin-top: -6px;
+        font-size: 12px;
+      }
+
+      .iconfont {
+        font-size: 18px;
+        font-weight: bold;
+        height: 26px;
+        margin-top: 2px;
+      }
+    }
+
+    .router-link-active {
+      color: @linkcss-active; //   color: @link-active;
+      font-weight: bold;
+    }
+  }
+}
+
+/*尾部导航栏模块end---------------------*/

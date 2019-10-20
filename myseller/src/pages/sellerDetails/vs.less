@@ -1,0 +1,81 @@
+@import "~baseStyle/variable.less";
+@import "~baseStyle/mixin.less";
+
+.sellerDetails-ctn {
+  .setPageContainer();
+
+  .goback-btn {
+    position: absolute;
+    top: 0px;
+    left: -20px;
+    background: rgb(63, 180, 131);
+    color: #fff;
+    z-index: 100;
+    width: 60px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    text-indent: 10px;
+    border-radius: 0px 10px 10px 0px;
+  }
+
+  /* 子容器布局*/
+  .app-entry-rv-ctn {
+    display: flex;
+    position: absolute;
+    top: 174px;
+    bottom: 46px;
+    width: 100%;
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  /* 子容器布局__end*/
+
+  .slidergo-leave {
+    opacity: 0;
+  }
+
+  .slidergo-leave-to {
+    opacity: 0;
+  }
+
+  .slidergo-enter {
+    opacity: 0; // transform: translate()
+  }
+
+  .slidergo-enter-active {
+    animation: bounce-in 0.3s; // transition: all 0.3s;
+  }
+
+  .slidergo-enter-to {
+    opacity: 1;
+  }
+
+  /* 导航模块__start-----------------*/
+  .tab {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    // border-bottom: 1px solid rgba(7, 17, 27, 0.1)
+    .border-1px(rgba(7, 17, 27, 0.1));
+
+    .tab-item {
+      flex: 1;
+      text-align: center;
+
+      &>a {
+        display: block;
+        font-size: 14px;
+        color: rgb(77, 85, 93);
+
+        &.router-link-active {
+          color: rgb(240, 20, 20);
+        }
+      }
+    }
+  }
+
+  /* 导航模块__end-----------------*/
+}
